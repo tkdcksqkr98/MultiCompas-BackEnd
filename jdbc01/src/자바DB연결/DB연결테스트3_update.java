@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 //import java.sql.PreparedStatement;
 
-public class DB연결테스트 {
+public class DB연결테스트3_update {
 
 	public static void main(String[] args) {
 		try {
@@ -27,12 +27,12 @@ public class DB연결테스트 {
 			//SQL부품으로 만들어주어야 함.
 			//PreparedStatement가 SQL부품 !!
 			
-			String sql = "insert into hr.MEMBER values('win3', 'win3', 'win3', 'win3')";
+			String sql = "update hr.MEMBER set tel = '5555' where id = 'apple' ";
 			PreparedStatement ps = con.prepareStatement(sql); //PreparedStatement
 			//con 부품으로 sql스트링에 있는 것 SQL부품으로 만들어주세요.
 			System.out.println("3.SQL문 부품(객체)으로 만들어주기");
 			
-			ps.executeUpdate();
+			ps.executeUpdate(); //insert, update, delete문만!! sql문 실행결과가 int
 			System.out.println("4.SQL문 오라클로 보내기 성공.");
 			//System.out.println(result);
 		} catch (Exception e) {
