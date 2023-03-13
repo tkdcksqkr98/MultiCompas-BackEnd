@@ -17,7 +17,10 @@ import javax.swing.JTextField;
 import 자바DB연결.MemberDAO;
 
 public class MemberUI {
-
+	public void open() {
+		// TODO Auto-generated method stub
+		
+	}
 	public static void main(String[] args) {
 		JFrame f = new JFrame();
 		f.setTitle("음식 추천 선택창");
@@ -42,11 +45,9 @@ public class MemberUI {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				String name = b1.getText();
 					JOptionPane.showMessageDialog(f, "양식 메뉴로 이동합니다");
 					양식 food = new 양식();
 					food.open();
-					f.setVisible(false);
 				
 
 			}
@@ -61,7 +62,6 @@ public class MemberUI {
 				JOptionPane.showMessageDialog(f, "일식 메뉴로 이동합니다");
 				일식 food = new 일식();
 				food.open();
-				f.setVisible(false);
 			}
 		});
 
@@ -74,7 +74,6 @@ public class MemberUI {
 				JOptionPane.showMessageDialog(f, "중식 메뉴로 이동합니다");
 				중식 food = new 중식();
 				food.open();
-				f.setVisible(false);
 			}
 		});
 		// f에 위에 있는 요소들을 add로 붙여주어야하는데,
@@ -103,19 +102,13 @@ public class MemberUI {
 		b3.setFont(font);
 
 
-		b1.setBackground(Color.pink);
-		b1.setForeground(Color.black);
-		b2.setBackground(Color.pink);
-		b2.setForeground(Color.black);
-		b3.setBackground(Color.pink);
-		b3.setForeground(Color.black);
 
-		f.getContentPane().setBackground(Color.ORANGE);
 
 		f.setLayout(flow);
 
 		f.setVisible(true);
 
 	}
+
 
 }
