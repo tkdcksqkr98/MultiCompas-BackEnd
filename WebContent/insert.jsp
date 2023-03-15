@@ -1,3 +1,5 @@
+<%@page import="multi.MemberVO"%>
+<%@page import="multi.MemberDAO3"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <% //스크립트릿 - 조금 코드를 써서 만드는 작은 프로그램
@@ -8,6 +10,19 @@
     String pw = request.getParameter("pw"); //"1234"
     String name = request.getParameter("name"); //"apple"
     String tel = request.getParameter("tel"); //"010"
+    
+    //가방을 만들어서 값들을 넣고!(set)!
+    //jsp에서 자동improt - 해당클래스 클릭한 다음 컨트롤  + 쉬프트 + m
+    MemberVO bag = new MemberVO();
+    bag.setId(id);
+    bag.setPw(pw);
+    bag.setName(name);
+    bag.setTel(tel);
+    //dao에게 가방을 전달하자.!
+    
+    MemberDAO3 dao = new MemberDAO3();
+    dao.insert(bag);
+    
     
     %>
     <!--3. 브라우저에게 결과를 알려주기 위한 html코드가 미리 들어가 있음.  -->

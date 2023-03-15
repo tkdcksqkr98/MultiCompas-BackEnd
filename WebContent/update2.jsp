@@ -1,17 +1,12 @@
-<%@page import="multi.MemberDAO3"%>
-<%@page import="multi.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <% //스크립트릿 - 조금 코드를 써서 만드는 작은 프로그램
     //자바코드 넣는 부분!!
     //HttpsServletRequest request = new HttpsServletRequest(); 
     //teomcat은 미리 requset를 만들어서 내장시켜놨어요!
-    String id = request.getParameter("id"); //"apple"
+    String no = request.getParameter("no"); //"apple"
+    String content = request.getParameter("content"); //"010"
     
-    //dao에게 가방을 전달하자.!
-    
-    MemberDAO3 dao = new MemberDAO3();
-    dao.delete(id);
     %>
     <!--3. 브라우저에게 결과를 알려주기 위한 html코드가 미리 들어가 있음.  -->
 <!DOCTYPE html>
@@ -27,8 +22,9 @@ body{
 </style>
 </head>
 <body>
-회원탈퇴가 요청되었음.
+회원정보 수정 요청되었음.
 <hr color ="red">
-탈퇴한 id : <%= id %> <br>
+당신이 수정을 원하는 번호는 no : <%= no %> <br>
+당신이 수정을 원하는 전화번호는 content : <%= content %> <br>
 </body>
 </html>
