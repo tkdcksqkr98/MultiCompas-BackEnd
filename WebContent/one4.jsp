@@ -1,13 +1,13 @@
-<%@page import="multi.BbsVO"%>
-<%@page import="multi.BbsDAO"%>
+<%@page import="multi.MovieVO"%>
+<%@page import="multi.MovieDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%
-    	String title = request.getParameter("title"); 
+    	String id = request.getParameter("id"); 
     	
     	
-    	BbsDAO dao = new BbsDAO();
-    	BbsVO bag2 = dao.read(title);
+    	MovieDAO dao = new MovieDAO();
+    	MovieVO bag2 = dao.one(id);
     	
     	
     %>
@@ -21,20 +21,28 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-당신이 검색을 원하는 번호는  <%= title %>
+당신이 검색을 원하는 id는  <%= id %>
 <hr color="red">
-<table class="table table-dark table-striped">
+<table class="table table-danger table-striped">
 <tr>
-<td>검색한 제목</td>
+<td>영화 id</td>
+<td><%= bag2.getId() %></td>
+</tr>
+<tr>
+<td>영화명</td>
 <td><%= bag2.getTitle() %></td>
 </tr>
 <tr>
-<td>검색한 내용</td>
+<td>영화내용</td>
 <td><%= bag2.getContent() %></td>
 </tr>
 <tr>
-<td>검색한 글쓴이</td>
-<td><%= bag2.getWriter() %></td>
+<td>상영위치</td>
+<td><%= bag2.getLocation() %></td>
+</tr>
+<tr>
+<td>제작자</td>
+<td><%= bag2.getDirector() %></td>
 </tr>
 </table>
 </body>
