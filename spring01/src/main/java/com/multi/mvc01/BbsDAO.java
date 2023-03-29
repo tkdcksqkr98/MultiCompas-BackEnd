@@ -74,7 +74,7 @@ public class BbsDAO {
 		return list;
 	}
 
-	public BbsVO one(int no) {
+	public BbsVO one(String no) {
 		ResultSet rs = null; // 항목명 + 결과 데이터를 담고 있는 테이블
 		// 기본형 정수/실수/문자/논리만 값으로 초기화
 		// 나머지 데이터형(참조형) 주소가! 들어가 있음.
@@ -103,7 +103,7 @@ public class BbsDAO {
 
 			String sql = "select * from bbs where NO = ? ";
 			PreparedStatement ps = con.prepareStatement(sql); // PreparedStatement
-			ps.setInt(1, no);
+			ps.setString(1, no);
 			System.out.println("3. SQL문 부품(객체)으로 만들어주기 성공.");
 
 			rs = ps.executeQuery(); // select의 결과는 항목명+Row 테이블!!

@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller //스프링에서 제어하는 역할로 등록
-public class BbsController {
+public class BookController {
 	
 	@Autowired    //자동으로 둘러보면서 찾다
-	BbsDAO dao;
+	BookDAO dao;
 	//컨트롤하는 기능(CRUD)
 	//회원가입, 수정, 탈퇴, 정보검색
 	
@@ -21,8 +21,8 @@ public class BbsController {
 	//요청된 주소가 어떻게 될 때 
 	//바로 아래에 있는 메서드가 호출이 될지를 
 	//써주어야 한다.
-	@RequestMapping("insert2.multi")
-	public void insert(BbsVO bag) {
+	@RequestMapping("insert3.multi")
+	public void insert(BookVO bag) {
 		//메서드의 입력변수(파라메터)로 변수를
 		//선언해두면, 컨트롤러내의 메서드 내에서는
 		//1)bag을 만들어서 
@@ -32,23 +32,11 @@ public class BbsController {
 		System.out.println(bag);
 		dao.insert(bag);
 	}
-	@RequestMapping("update2.multi")
-	public void update(BbsVO bag) {
-		System.out.println("update요청됨.");
-		System.out.println(bag);
-		dao.update(bag);
-	}
-	@RequestMapping("delete2.multi")
-	public void delete(int no) {
-		System.out.println("delete요청됨.");
-		System.out.println(no);
-		dao.delete(no);
-	}
-	@RequestMapping("one2.multi")
-	public void one(String no, Model model) {
-		System.out.println("one요청됨.");
-		System.out.println(no);
-		BbsVO bag = dao.one(no);
+	
+	@RequestMapping("one4.multi")
+	public void one4(String id, Model model) {
+		BookVO bag = dao.one(id);
 		model.addAttribute("bag",bag);
 	}
+	
 }

@@ -12,10 +12,7 @@ body {
 </style>
 </head>
 <body>
-게시판검색 처리 요청이 완료되었습니다<br>
-${bag.no} <br><!-- 출력용(expresstion language-EL -->
-${bag.title} <br>
-${bag.content} <br>
-${bag.writer} <br>
+커피는 적당히~
+<img src="resources/img/커피.jpg" width="250" height="250">
 </body>
 </html>

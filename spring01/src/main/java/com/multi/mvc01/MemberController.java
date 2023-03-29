@@ -2,6 +2,7 @@ package com.multi.mvc01;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller //스프링에서 제어하는 역할로 등록! 
@@ -19,6 +20,21 @@ public class MemberController {
 	//요청된 주소가 어떻게 될 때
 	//바로 아래에 있는 메서드가 호출이 될지를
 	//써주어야 한다. 
+	@RequestMapping("login")
+	public String login(MemberVO bag) {
+		System.out.println(bag);
+		//dao를 이용해서 db처리할 예정.
+		//view아래로 넘어가게 되어있음.
+		//view아래 login.jsp를 호출하게 됨.
+		int result = dao.login(bag); //1, 0
+		if (result == 1) {
+			return "ok";
+		}else {
+			return "redirect:member.jsp"; //로그인실패했을때 창이넘어가지않음
+		}
+		
+	}
+	
 	@RequestMapping("insert")
 	public void insert(MemberVO bag) {
 		//메서드의 입력변수(파라메터)로 변수를
@@ -49,9 +65,14 @@ public class MemberController {
 	}
 	
 	@RequestMapping("one")
-	public void one(MemberVO bag) {
+	public void one(String id, Model model) {
 		System.out.println("one요청됨.");
-		System.out.println(bag);
+		System.out.println(id);
+		MemberVO bag = dao.one(id);
+		//bag에 검색결과 다 들어있음.
+		//views아래 one.jsp로 쓸 수 있도록 설정해주어야 함.
+		model.addAttribute("bag", bag);
+		//views까지 전달할 속성으로 추가해주세요.
 	}
 	
 	@RequestMapping("list")
