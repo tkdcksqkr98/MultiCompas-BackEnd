@@ -8,16 +8,13 @@
 </head>
 <body>
 <%
-	session.setAttribute("views", 0);
-	if(session == null){
-		
-	}else{
-		
-	}
-	
-
+	session.setAttribute("view", 100);
+//세션의 값으로는 아무 타입이나 다 넣어도 됨.
+//==> 주차장 생각! Car면 다 됨!
+//==> Car(큰) <-- 트럭, 승용차, 버스, ....(작)
+//==> 타입변환(형변환), 자동형변환
 %>
-<hr>서버에 세션 속성등록함.
-<a href="page04.jsp">session가지고오기</a>
+<hr>서버에 세션 속성등록함. 
+<a href="page04.jsp">session속성가지고오기</a>
 </body>
 </html>
