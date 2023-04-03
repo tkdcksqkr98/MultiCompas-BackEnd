@@ -1,0 +1,36 @@
+package com.multi.mvc200;
+
+public class MovieVO {
+	private String name;
+	@Override
+	public String toString() {
+		return "MovieVO [name=" + name + ", price=" + price + "]";
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	private int price;
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+}
+
+
+
