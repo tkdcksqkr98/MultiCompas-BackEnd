@@ -3,7 +3,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<link rel="icon" href="data:;base64,iVBORw0KGgo=">
 	<table>
 		<tr>
 			<td class="top">id</td>
@@ -12,6 +11,7 @@
 			<td class="top">tel</td>
 		</tr>
 
+		<c:forEach items="${list}" var="bag"> 
 
 <tr>
 				<td class="down">${bag.id}</td>
@@ -20,4 +20,5 @@
 				<td class="down">${bag.tel}</td>
 			</tr>
 
+		</c:forEach>
 	</table>
