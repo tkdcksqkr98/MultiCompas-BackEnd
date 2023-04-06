@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 <style>
 body {
-	background: cyan;
+	background: yellow;
 }
 </style>
 </head>
 <body>
-회원수정 처리 요청이 완료되었습니다
+라면 한사바리 하시죠
+<img src="resources/img/라면.jpg" width="250" height="250">
 </body>
 </html>

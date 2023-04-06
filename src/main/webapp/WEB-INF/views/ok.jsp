@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 <style>
 body {
-	background: cyan;
+	background: yellow;
 }
 </style>
 </head>
 <body>
-회원수정 처리 요청이 완료되었습니다
+${id}님!로그인 처리 성공<br>
+<img src="resources/img/yes.jpg" width="250" height="250">
 </body>
 </html>
