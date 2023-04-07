@@ -42,5 +42,10 @@ public class MemberDAO {
 		int result = my.insert("member.create", bag);
 		return result;
 	}
+	  
+	  public MemberVO one(String id) {
+		MemberVO bag = my.selectOne("member.one", id);
+		return bag;
+	}
 
 }

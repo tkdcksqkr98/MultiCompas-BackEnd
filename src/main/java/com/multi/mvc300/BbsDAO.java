@@ -41,5 +41,10 @@ public class BbsDAO {
 		int result = my.insert("bbs.create", bag);
 		return result;
 	}
+	
+	public BbsVO one(int no) {
+		BbsVO bag = my.selectOne("bbs.one", no);
+		return bag;
+	}
 
 }

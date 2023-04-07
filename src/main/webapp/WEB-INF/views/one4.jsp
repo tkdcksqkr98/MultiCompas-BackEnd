@@ -5,13 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-body {
-	background: yellow;
-}
-</style>
 </head>
 <body>
-회원 등록 요청이 완료되었습니다.
+${bag.id}, ${bag.pw}, ${bag.name}, ${bag.favorite}
 </body>
 </html>
+
+
+
+

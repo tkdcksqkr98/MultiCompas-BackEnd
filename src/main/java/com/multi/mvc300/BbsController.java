@@ -49,16 +49,15 @@ public class BbsController {
 		System.out.println(no);
 		dao.delete(no);
 	}
-//	
-//	@RequestMapping("one2.multi")
-//	public void one(int no, Model model) {
-//		System.out.println("one요청됨.");
-//		System.out.println(no);
-//		BbsVO bag = dao.one(no);
-//		//검색결과가 있는지 프린트!
-//		System.out.println(bag);
-//		model.addAttribute("bag", bag);
-//	}
+	
+	@RequestMapping("one2.multi")
+	public void one(int no, Model model) {
+		System.out.println("one요청됨.");
+		System.out.println(no);
+		BbsVO bag = dao.one(no);
+		//검색결과가 있는지 프린트!
+		model.addAttribute("bag", bag);
+	}
 //	
 //	@RequestMapping("list2")
 //	public void list(Model model) {
