@@ -13,7 +13,7 @@
 <hr color="red">
 <!-- one?id=1 -->
 <form action="one" method="get">
-	id : <input name="id" value="apple"><br>
+	no : <input name="no" value="apple"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
@@ -30,10 +30,10 @@
 <h3>회원가입 화면입니다. </h3>
 <hr color="red">
 <form action="insert" method="get">
-	id : <input name="id" value="samsung"><br>
-	pw : <input name="pw" value="1234"><br>
-	name : <input name="name" value="park"><br>
-	tel : <input name="tel" value="011"><br>
+	no : <input name="no" value="samsung"><br>
+	content : <input name="content" value="1234"><br>
+	writer : <input name="writer" value="park"><br>
+	writtenTime : <input name="writtenTime" value="011"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
@@ -41,8 +41,8 @@
 <h3>회원수정 화면입니다. </h3>
 <hr color="red">
 <form action="update" method="get">
-	id : <input name="id" value="apple"><br>
-	tel : <input name="tel" value="011"><br>
+	no : <input name="no" value="apple"><br>
+	writer : <input name="writer" value="011"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
@@ -50,7 +50,7 @@
 <h3>회원탈퇴 화면입니다. </h3>
 <hr color="red">
 <form action="delete" method="get">
-	id : <input name="id" value="samsung"><br>
+	no : <input name="no" value="samsung"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
@@ -58,11 +58,10 @@
 <h3>회원검색 화면입니다. </h3>
 <hr color="red">
 <form action="one" method="get">
-	id : <input name="id" value="apple"><br>
+	no : <input name="no" value="apple"><br>
 	<button type="submit">서버로 전송</button>
 </form>
 <hr color="red">
 
-<button type="button">먹통버튼(아무 기능이 없음)</button>
 </body>
 </html>

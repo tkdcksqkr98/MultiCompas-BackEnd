@@ -1,4 +1,4 @@
-package com.multi.mvc901;
+package com.multi.mini;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,13 +11,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller 
-public class MemberController {
+public class ReportController {
 	
 	@Autowired    
-	MemberDAO dao;
+	ReportDAO dao;
 	
 	@RequestMapping("insert")
-	public void insert(MemberVO bag) {
+	public void insert(ReportVO bag) {
 		System.out.println(bag);
 		dao.insert(bag);
 	}
@@ -27,19 +27,19 @@ public class MemberController {
 		dao.delete(id);
 	}
 	@RequestMapping("update")
-	public void update(MemberVO bag) {
+	public void update(ReportVO bag) {
 		System.out.println(bag);
 		dao.update(bag);
 	}
 	@RequestMapping("one")
 	public void one(String id, Model model) {
 		System.out.println(id);
-		MemberVO vo = dao.one(id);
+		ReportVO vo = dao.one(id);
 		model.addAttribute("vo", vo);
 	}
 	@RequestMapping("list")
 	public void list(Model model) {
-		List<MemberVO> list = dao.list();
+		List<ReportVO> list = dao.list();
 		model.addAttribute("list", list);
 	}
 }
