@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원검색이 요청됨.!와~~~~!! 
+정보검색이 요청됨.
 <!-- 속성으로 지정한 값은 EL로 프린트 -->
 <hr color="red">
-${vo.id} <br>
-${vo.pw} <br>
-${vo.name} <br>
-${vo.tel} <br>
+${vo.no} <br>
+${vo.title} <br>
+${vo.content} <br>
+${vo.writer} <br>
 </body>
 </html>

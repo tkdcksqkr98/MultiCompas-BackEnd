@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-ㅠㅠ회원탈퇴했어 ㅠㅠ
+정보가 삭제됨.
 </body>
 </html>

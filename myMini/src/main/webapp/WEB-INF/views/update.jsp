@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-수정이 이루어졌느니라
+정보수정이 요청됨.
 </body>
 </html>

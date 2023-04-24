@@ -13,10 +13,10 @@
 <!-- 속성으로 지정한 값은 EL로 프린트 -->
 <c:forEach items="${list}" var="vo">
 <hr color="red">
-${vo.id} <br>
-${vo.pw} <br>
-${vo.name} <br>
-${vo.tel} <br>
+${vo.no} <br>
+${vo.title} <br>
+${vo.content} <br>
+${vo.writer} <br>
 </c:forEach>
 </body>
 </html>

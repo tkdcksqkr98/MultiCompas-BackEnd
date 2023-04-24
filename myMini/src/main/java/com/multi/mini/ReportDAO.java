@@ -13,18 +13,21 @@ public class ReportDAO {
 	@Autowired
 	SqlSessionTemplate my;
 	
-	public void insert(ReportVO bag) {
-		my.insert("report.create", bag);
+	public int insert(ReportVO bag) {
+		int result = my.insert("report.create", bag);
+		return result;
 	}
-	public void delete(String no) {
+	public int delete(int no) {
 		int result = my.delete("report.delete", no);
 		System.out.println(result);
+		return result;
 	}
-	public void update(ReportVO bag) {
+	public int update(ReportVO bag) {
 		int result = my.update("report.update", bag);
 		System.out.println(result);
+		return result;
 	}
-	public ReportVO one(String no) {
+	public ReportVO one(int no) {
 		ReportVO vo = my.selectOne("report.one", no);
 		return vo;
 	}

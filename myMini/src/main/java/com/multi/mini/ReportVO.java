@@ -1,19 +1,25 @@
 package com.multi.mini;
 
-import java.sql.Timestamp;
 
 public class ReportVO {
 	//MemberV0가방에 넣은 데이터는 Member테이블에 들어갈 예정
 	//각 컬럼과 일치시켜 줌.
+	
 	private int no;
+	private String title;
 	private String content ;
 	private String writer;
-	private Timestamp writtenTime;
 	public int getNo() {
 		return no;
 	}
 	public void setNo(int no) {
 		this.no = no;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getContent() {
 		return content;
@@ -27,16 +33,9 @@ public class ReportVO {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
-	public Timestamp getWrittenTime() {
-		return writtenTime;
-	}
-	public void setWrittenTime(Timestamp writtenTime) {
-		this.writtenTime = writtenTime;
-	}
 	@Override
 	public String toString() {
-		return "ReportVO [no=" + no + ", content=" + content + ", writer=" + writer + ", writtenTime=" + writtenTime
-				+ "]";
+		return "ReportVO [no=" + no + ", title=" + title + ", content=" + content + ", writer=" + writer + "]";
 	}
 	
 	

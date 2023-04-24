@@ -18,23 +18,19 @@ public class ReportController {
 	
 	@RequestMapping("insert")
 	public void insert(ReportVO bag) {
-		System.out.println(bag);
 		dao.insert(bag);
 	}
 	@RequestMapping("delete")
-	public void delete(String id) {
-		System.out.println(id);
-		dao.delete(id);
+	public void delete(int no) {
+		dao.delete(no);
 	}
 	@RequestMapping("update")
 	public void update(ReportVO bag) {
-		System.out.println(bag);
 		dao.update(bag);
 	}
 	@RequestMapping("one")
-	public void one(String id, Model model) {
-		System.out.println(id);
-		ReportVO vo = dao.one(id);
+	public void one(int no, Model model) {
+		ReportVO vo = dao.one(no);
 		model.addAttribute("vo", vo);
 	}
 	@RequestMapping("list")

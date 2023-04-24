@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원가입이 요청됨.
+정보등록이 요청됨.
 </body>
 </html>
