@@ -5,6 +5,17 @@
 <head>
 <meta charset="UTF-8">
 <title>강아지와 유기동물 신고페이지</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $.ajax({
+        url : "list",
+        success : function(response) {
+			$('#result').append(response)        	
+        }//success
+    })
+})
+</script>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -44,8 +55,7 @@ body {
 			<li class="nav-item"><a href="#" class="nav-link link-secondary">마이페이지</a></li>
 		</ul>
 	</header>
-<h3>유기동물 신고페이지 </h3>
-<a href="list">모든 게시물정보 가지고 오기</a>
+<!-- <a href="list">모든 게시물정보 가지고 오기</a>
 
 <hr color="red">
 
@@ -57,9 +67,9 @@ body {
 	작성자 : <input name="writer" value="park"><br>
 	<button type="submit">등록</button>
 </form>
-<hr color="red">
+<hr color="red"> -->
 
 
-
+<div id="result"></div>
 </body>
 </html>

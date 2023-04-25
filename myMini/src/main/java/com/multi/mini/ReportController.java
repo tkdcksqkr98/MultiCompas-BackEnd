@@ -34,8 +34,9 @@ public class ReportController {
 		model.addAttribute("vo", vo);
 	}
 	@RequestMapping("list")
-	public void list(Model model) {
+	public List<ReportVO> list(Model model) {
 		List<ReportVO> list = dao.list();
 		model.addAttribute("list", list);
+		return list;
 	}
 }
