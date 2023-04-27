@@ -15,10 +15,11 @@ public class ReportDAO {
 	
 	public int insert(ReportVO bag) {
 		int result = my.insert("report.create", bag);
+		System.out.println("insert >>> ");
 		return result;
 	}
-	public int delete(int no) {
-		int result = my.delete("report.delete", no);
+	public int delete(String title) {
+		int result = my.delete("report.delete", title);
 		System.out.println(result);
 		return result;
 	}

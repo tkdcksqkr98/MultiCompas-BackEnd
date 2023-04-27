@@ -17,12 +17,15 @@ public class ReportController {
 	ReportDAO dao;
 	
 	@RequestMapping("insert")
-	public void insert(ReportVO bag) {
+	public String insert(ReportVO bag) {
 		dao.insert(bag);
+		return "redirect:report.jsp";
 	}
+	
 	@RequestMapping("delete")
-	public void delete(int no) {
-		dao.delete(no);
+	public String delete(String title) {
+		dao.delete(title);
+		return "redirect:report.jsp";
 	}
 	@RequestMapping("update")
 	public void update(ReportVO bag) {

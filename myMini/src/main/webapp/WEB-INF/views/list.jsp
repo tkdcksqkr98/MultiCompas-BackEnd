@@ -13,9 +13,12 @@
 </head>
 <body>
 <div class="container mt-3">
-  <h3>유기동물 신고페이지</h3>
-  <a href="insert">
-             <button type="submit" class="btn btn-primary">등록</button>
+  <h3>📢유기동물 신고페이지</h3>
+  <a href="insert.jsp">
+             <button type="submit" class="btn btn-primary">작성하기</button>
+             </a>
+             <a href="delete.jsp">
+             <button type="submit" class="btn btn-primary">삭제하기</button>
              </a>
    <table class="table">
     <thead class="table-success">

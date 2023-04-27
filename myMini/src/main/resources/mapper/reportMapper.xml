@@ -10,9 +10,9 @@
 		values (null, #{title}, #{content}, #{writer})
 	</insert>
 	
-	<delete id="delete"  parameterType="Int">
+	<delete id="delete"  parameterType="String">
 		delete from report 
-		where no = #{no}
+		where title = #{title}
 	</delete>
 	
 	<update id="update"  parameterType="reportVO">
