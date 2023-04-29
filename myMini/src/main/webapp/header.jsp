@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>강아지와</title>
+<title>강아지와🐶</title>
 <!-- Latest compiled and minified CSS -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
@@ -36,6 +36,7 @@
 			<li class="nav-item"><a href="listhospital?category3=동물병원" class="nav-link link-secondary">반려동물서비스</a></li>
 			<li class="nav-item"><a href="#" class="nav-link link-secondary">고객센터</a></li>
 			<li class="nav-item"><a href="report.jsp" class="nav-link link-secondary">유기동물신고</a></li>
+			<li class="nav-item"><a href="#" class="nav-link link-secondary">마이페이지</a></li>
 
 
 		</ul>

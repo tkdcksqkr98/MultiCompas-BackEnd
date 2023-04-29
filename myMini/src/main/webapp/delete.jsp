@@ -16,7 +16,7 @@
 <hr color="red">
 <form action="delete" method="get">
 	제목 : <input name="title" value="011"><br>
-             <button type="submit" class="btn btn-primary">작성하기</button>
+             <button type="submit" class="btn btn-primary">삭제하기📮</button>
             
 </form>
 
